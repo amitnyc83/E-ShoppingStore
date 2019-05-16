@@ -50,9 +50,6 @@ Rails.application.configure do
   config.assets.debug = true
 
 
-
- config.debug_exception_response_format = :default
-
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
