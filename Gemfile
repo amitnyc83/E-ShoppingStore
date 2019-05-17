@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.5'
  gem 'foreman', '~> 0.82.0'
  gem 'thor', '~>0.19.1'
 
+ gem 'active_model_serializers'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
