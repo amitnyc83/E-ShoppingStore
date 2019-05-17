@@ -13,7 +13,7 @@ Product.create(
       name: "Iphone X",
       description: "256GB Apple Iphone X in Black. This is an Unlocked apple iphone x that will work with any network.",
       image: "../assets/images/iphone-x.jpg",
-      prie: "$799.99"
+      price: "$799.99"
     },
     {
       name: "Beats Headphones",
@@ -42,7 +42,6 @@ Product.create(
   ]
 )
 
+ShippingAddress.create(address: "123 Broadway", city: "New York", state: "NY", country: "USA", zip_code: "10001")
 
-user = User.create(first_name: "Jane", last_name: "Doe", email: "janedoe@email.com", password: "1234")
-
-user.cart.products<<[Product.find(1), Product.find(2)]
+User.create(first_name: "Jane", last_name: "Doe", email: "janedoe@email.com", password: "1234", shipping_address_id: 1)

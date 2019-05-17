@@ -6,7 +6,7 @@ class CreateShippingAddresses < ActiveRecord::Migration[5.2]
       t.string :state
       t.string :country
       t.integer :zip_code
-
+      t.integer :user_id
       t.timestamps
     end
   end
