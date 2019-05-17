@@ -5,3 +5,44 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Product.create(
+  [
+    {
+      name: "Iphone X",
+      description: "256GB Apple Iphone X in Black. This is an Unlocked apple iphone x that will work with any network.",
+      image: "../assets/images/iphone-x.jpg",
+      prie: "$799.99"
+    },
+    {
+      name: "Beats Headphones",
+      description: "3rd Generation Wireless Noise Cancelling Beats Headphone. Brand new. If you are looking for a good headphones then this is the one for you. Comes with 3 years Manufacturer's warranty.",
+      image: "../assets/images/beats.jpg",
+      price: "$279.99"
+    },
+    {
+      name: "Burberry Ladies HandBag",
+      description: "Authentic Luxury Ladies HandBag from Burberry. If you sare looking to make a fashion statement then this is the abg for you.",
+      image: "../assets/images/burberry-handbag.jpg",
+      price: "$1499.99"
+    },
+    {
+      name: "Rolex Yacht Master",
+      description: "Authentic Rolex Yacht Master with rubber strap, Ceramic bezel with 18Kt EverRose Gold. Limited Edition. 2018 Model. 70 Hours power Reserve.",
+      image: "../assets/images/rolex-yacht-master.jpg",
+      price: "$21850"
+    },
+    {
+      name: "Victoria Secret Ladies Parfum",
+      description: "Hey Ladies! Looking For A New Parfum for the party. Give Victoria Secret's Newest Parfum A Try. With a scent of Rose, Everyone Will Want To Know What You Are Wearing At The Party.",
+      image: "../assets/images/victoria_secret_perfum.jpg",
+      price: "$69.99"
+    }
+  ]
+)
+
+
+user = User.create(first_name: "Jane", last_name: "Doe", email: "janedoe@email.com", password: "1234")
+
+user.cart.products<<[Product.find(1), Product.find(2)]
