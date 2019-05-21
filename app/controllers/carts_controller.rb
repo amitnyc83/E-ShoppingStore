@@ -8,7 +8,13 @@ class CartsController < ApplicationController
   def update
     @cart = Cart.find(params[:id])
     @cart.update(cart_params)
-    render json: @cart, status: 201
+    if @cart.save
+     render json: @cart, status: 201
+    end
+  end
+
+  def cart_params
+    params.permit(:cart_id)
   end
 
 end

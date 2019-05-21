@@ -1,5 +1,12 @@
 class UsersController < ApplicationController
 
+  def index
+    @users = User.all
+    render json: @users
+  end
+
+  def
+
   def create
     @user =User.new_with_cart(user_params)
     if @user.save
@@ -27,6 +34,10 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email, :password)
+  end
+
+  def find_user
+    @user = User.find(params[:id])
   end
 
 end

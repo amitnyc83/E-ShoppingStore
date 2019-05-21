@@ -7,6 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+user = User.new_with_cart(first_name: "Jane", last_name: "Doe", email: "janedoe@email.com", password: "1234")
+user.save
+
+shipping_address = ShippingAddress.create(address: "123 Broadway", city: "New York", state: "NY", country: "USA", zip_code: "10001")
+shipping_address.save
+
 Product.create(
   [
     {
@@ -42,6 +48,4 @@ Product.create(
   ]
 )
 
-ShippingAddress.create(address: "123 Broadway", city: "New York", state: "NY", country: "USA", zip_code: "10001")
-
-User.create(first_name: "Jane", last_name: "Doe", email: "janedoe@email.com", password: "1234", shipping_address_id: 1)
+user.cart.products << [Product.find(1), Product.find(3)]
