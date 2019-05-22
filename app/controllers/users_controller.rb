@@ -5,10 +5,11 @@ class UsersController < ApplicationController
     render json: @users
   end
 
-  def
+
 
   def create
-    @user =User.new_with_cart(user_params)
+    @user = User.new_with_cart(user_params)
+    @user
     if @user.save
       render json: @user, status: 201
     end
