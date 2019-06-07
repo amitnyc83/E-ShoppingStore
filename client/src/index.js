@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'semantic-ui-css/semantic.css'
+import { Provider, createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import 'semantic-ui-css/semantic.css';
 import './index.css';
 import App from './App';
 // import * as serviceWorker from './serviceWorker';
