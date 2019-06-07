@@ -7,8 +7,8 @@ class CartProductsController < ApplicationController
   end
 
   def destroy
-    @cart_product = CartProduct.find_by(cart_product_params)
-    @cart = Cart.find(@cart_product.cart_id)
+    @product = CartProduct.find_by(cart_product_params)
+    @cart = Cart.find(params[:cart_id])
     @cart_product.destroy
     render json: @cart
   end
@@ -18,5 +18,5 @@ class CartProductsController < ApplicationController
   def cart_product_params
     params.require(:cart_product).permit(:cart_id, :product_id)
   end
-   
+
 end

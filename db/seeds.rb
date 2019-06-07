@@ -7,8 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-user = User.new_with_cart(first_name: "Jane", last_name: "Doe", email: "janedoe@email.com", password: "1234")
-user.save
+user1 = User.new_with_cart(first_name: "Jane", last_name: "Doe", email: "janedoe@email.com", password: "1234")
+user1.save
+
+user2 = User.new_with_cart(first_name: "Jim", last_name: "Carrey", email: "jimcarrey@email.com", password: "1234")
+user2.save
 
 
 Product.create(
@@ -45,3 +48,5 @@ Product.create(
     }
   ]
 )
+
+user1.cart.products << [Product.find(1), Product.find(2)]

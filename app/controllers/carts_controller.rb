@@ -13,8 +13,6 @@ class CartsController < ApplicationController
     end
   end
 
-  def cart_params
-    params.permit(:cart_id)
-  end
+
 
 end

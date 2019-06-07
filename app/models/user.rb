@@ -8,9 +8,17 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  def self.new_with_cart(params)
-    user = User.new(params)
+  def self.new_with_cart(user_params)
+    user = User.new(user_params)
     user.build_cart
     user
+  end
+
+
+  private
+
+
+  def user_params
+    user.permit(:user)require(:id, :first_name, :last_name, :email)
   end
 end

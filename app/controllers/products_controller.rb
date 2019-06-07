@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
 
 
   def show
-    @product = Product.find (param[:id])
+    @product = Product.find(param[:id])
     render json: @product
-  end 
+  end
 end

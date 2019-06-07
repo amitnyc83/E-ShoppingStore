@@ -29,7 +29,7 @@ class ShippingAddressesController < ApplicationController
 
 
   def shipping_address_params
-    params.require(:shipping_adresss).permit(:addess, :city, :state, :country, :user_id)
+    params.require(:shipping_address).permit(:addess, :city, :state, :country, :user_id)
   end
 
 
