@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Input, Menu, Segment } from 'semantic-ui-react'
+import Logo from './Logo'
 
 export default class HomePage extends Component {
   state = {activeItem: 'home'}
