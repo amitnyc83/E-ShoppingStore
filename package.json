@@ -1,5 +1,7 @@
 {
   "name": "E-ShoppingStore",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "react-router-dom": "^5.0.1"
+  }
 }
