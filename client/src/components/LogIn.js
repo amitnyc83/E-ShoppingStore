@@ -1,27 +1,22 @@
 import React, { Component } from 'react'
-import { Button, Divider, Form, Grid, Segment } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
+import { Button, Divider, Form, Grid, Segment, Container } from 'semantic-ui-react'
 
 class LogIn extends Component {
   render() {
     return(
-      <Segment placeholder>
-        <Grid columns={2} relaxed='very' stackable>
-          <Grid.Column>
-            <Form>
-             <Form.Input icon='user' iconPosition='left' label='Email' placeholder='Email' />
-             <Form.Input icon='lock' iconPosition='left' label='Password' placeholder='Password' type='password' />
+      <Container>
+        <Form>
+          <Form.Group unstackable widths={2}>
+            <Form.Input icon='at' iconPosition='left' label='Email' placeholder='Email' />
+            <Form.Input icon='lock' iconPosition='left' label='Password' placeholder='Password' type='password' />
+          </Form.Group>
+          <Button primary type='submit' content='Login' />
+        </Form>
 
-             <Button primary type='submit' content='Login' />
-            </Form>
-          </Grid.Column>
-
-          <Grid.Column verticalAlign='middle'>
-          <Button content='Sign up' icon='signup' size='big' />
-        </Grid.Column>
-       </Grid>
-
-       <Divider vertical section>Or</Divider>
-      </Segment>
+       <Divider horizontal section>Or</Divider>
+       <Button as={Link} to='/signup' content='Sign up' icon='signup' size='big' secondary/>
+      </Container>
     )
   }
 }

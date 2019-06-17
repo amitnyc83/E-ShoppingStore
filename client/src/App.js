@@ -6,6 +6,7 @@ import HomePage from './components/HomePage'
 import ProductsList from './containers/ProductsList'
 import SignUp from './components/SignUp'
 import LogIn from './components/LogIn'
+import Cart from './containers/Cart'
 
 
 
@@ -21,6 +22,7 @@ class App extends Component {
         <Route exact path="/" component={ProductsList}/>
         <Route exact path="/LogIn" component={LogIn} />
         <Route exact path="/SignUp" component={SignUp} />
+        <Route exact path='/cart' component={Cart}/>
       </div>
     </Router>
     )
