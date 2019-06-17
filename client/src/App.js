@@ -4,8 +4,8 @@ import './App.css';
 import { Divider } from 'semantic-ui-react'
 import HomePage from './components/HomePage'
 import ProductsList from './containers/ProductsList'
-import SignIn from './components/SignIn'
-
+import SignUp from './components/SignUp'
+import LogIn from './components/LogIn'
 
 
 
@@ -19,7 +19,8 @@ class App extends Component {
         </header>
         <HomePage />
         <Route exact path="/" component={ProductsList}/>
-        <Route exact path="/SignIn" component={SignIn} />
+        <Route exact path="/LogIn" component={LogIn} />
+        <Route exact path="/SignUp" component={SignUp} />
       </div>
     </Router>
     )

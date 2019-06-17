@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Divider, Form, Grid, Segment } from 'semantic-ui-react'
 
-class SignIn extends Component {
+class LogIn extends Component {
   render() {
     return(
       <Segment placeholder>
@@ -26,4 +26,4 @@ class SignIn extends Component {
   }
 }
 
-export default SignIn
+export default LogIn
