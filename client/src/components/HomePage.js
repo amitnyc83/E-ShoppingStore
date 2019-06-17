@@ -7,7 +7,6 @@ export default class HomePage extends Component {
   state = {activeItem: 'home'}
 
 
-
   handleMenuClick = (e, { name }) => this.setState({ activeItem: name })
 
   render (){
@@ -21,20 +20,25 @@ export default class HomePage extends Component {
             color='orange'
             active={activeItem === 'home'}
             onClick={this.handleMenuClick}
-            />
+          />
           <Menu.Item
             name='cart'
             color='orange'
             active={activeItem === 'cart'}
             onClick={this.handleMenuClick}
-            />
+          />
           <Menu.Item
-            name='sign-in'
+            name='log-in'
             color='orange'
-            active={activeItem === 'sign-in'}
+            active={activeItem === 'log-in'}
             onClick={this.handleMenuClick}
-            >
-          </Menu.Item>
+          />
+          <Menu.Item
+            name='sign-up'
+            color='orange'
+            active={activeItem === 'sign-up'}
+            onClick={this.handleMenuClick}
+          />
           <Menu.Menu position='right'>
             <Menu.Item>
               <Input
