@@ -10,7 +10,7 @@ class LogIn extends Component {
           <Form.Group unstackable widths={2}>
             <Form.Input icon='at' iconPosition='left' label='Email' placeholder='Email' />
             <Form.Input icon='lock' iconPosition='left' label='Password' placeholder='Password' type='password' />
-          </Form.Group>
+          </Form.Group><br></br>
           <Button primary type='submit' content='Login' />
         </Form>
 
