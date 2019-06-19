@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Header, Container, Segment, Divider } from 'semantic-ui-react'
+import { Header, Container, Divider } from 'semantic-ui-react'
 
 
 class Cart extends Component {

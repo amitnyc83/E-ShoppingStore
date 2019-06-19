@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Form, Input, Button, Icon } from 'semantic-ui-react'
+import { Form, Button } from 'semantic-ui-react'
 
 class AccountForm extends Component {
   constructor() {
     super()
     this.state = {
-      firstname: '',
+      firstName: '',
       lastName: '',
       email: '',
       password: ''
@@ -14,6 +14,7 @@ class AccountForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
+    console.log(this.state)
   }
 
   handleChange = (e) => {
@@ -21,7 +22,7 @@ class AccountForm extends Component {
       [e.target.name]: e.target.value
     })
   }
-  
+
   render() {
     return(
       <Form className='attached fluid segment' onSubmit={this.handleSubmit}>
@@ -49,15 +50,17 @@ class AccountForm extends Component {
           type='text'
           name='email'
           icon='at'
+          iconPosition='left'
           value={this.state.email}
           onChange={this.handleChange}
           />
         <Form.Input
           label='Password'
-          placeholder='password'
+          placeholder='Password'
           type='password'
           name='password'
           icon='lock'
+          iconPosition='left'
           value={this.state.password}
           onChange={this.handleChange}
           />

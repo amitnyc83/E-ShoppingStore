@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { Input, Sticky, Menu, Segment, Image, Divider } from 'semantic-ui-react'
-import _ from 'lodash'
+import { Input, Sticky, Menu, Divider } from 'semantic-ui-react'
+
 
 
 export default class HomePage extends Component {
@@ -21,6 +21,13 @@ export default class HomePage extends Component {
             name='home'
             color='orange'
             active={activeItem === 'home'}
+            onClick={this.handleMenuClick}
+          />
+          <Menu.Item
+            as={Link} to='/account'
+            name='account'
+            color='orange'
+            active={activeItem === 'account'}
             onClick={this.handleMenuClick}
           />
           <Menu.Item

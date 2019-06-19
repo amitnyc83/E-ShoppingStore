@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css';
-import { Divider } from 'semantic-ui-react'
 import HomePage from './components/HomePage'
 import ProductsList from './containers/ProductsList'
 import SignUp from './components/SignUp'
