@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css';
 import HomePage from './components/HomePage'
-import ProductsList from './containers/ProductsList'
+import ProductsPage from './containers/ProductsPage'
 import SignUp from './components/SignUp'
 import LogIn from './components/LogIn'
 import Account from './components/Account'
@@ -19,7 +19,7 @@ class App extends Component {
         <h1 className="app-title">E-Shopping Store</h1>
         </header>
         <HomePage />
-        <Route exact path="/" component={ProductsList}/>
+        <Route exact path="/" component={ProductsPage}/>
         <Route exact path="/LogIn" component={LogIn} />
         <Route exact path="/SignUp" component={SignUp} />
         <Route exact path="/account" component={Account} />

@@ -19,6 +19,6 @@ class User < ApplicationRecord
 
 
   def user_params
-    user.permit(:user)require(:id, :first_name, :last_name, :email)
+    params.require(:user).permit(:password, :first_name, :last_name, :email)
   end
 end

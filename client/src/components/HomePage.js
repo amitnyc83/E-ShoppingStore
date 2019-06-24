@@ -4,7 +4,7 @@ import { Input, Sticky, Menu, Divider } from 'semantic-ui-react'
 
 
 
-export default class HomePage extends Component {
+class HomePage extends Component {
   state = {activeItem: 'home'}
 
 
@@ -66,3 +66,6 @@ export default class HomePage extends Component {
     )
   }
 }
+
+
+export default HomePage

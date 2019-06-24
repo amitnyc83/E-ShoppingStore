@@ -1,18 +1,16 @@
 import React, { Component } from 'react'
 
-
-
-class ProductInfo extends Component {
+class ProductBasic extends Component {
   render() {
     return(
       <div className='product-div'>
        <img className='product-img' src='https://react.semantic-ui.com/images/wireframe/image.png' />
-       <a href='#'><h4>Buy Now</h4></a>
-       <em>$49.99</em>
+       <a href='#'><h4>{this.props.name}</h4></a>
+       <strong>{this.props.price}</strong>
       </div>
     )
   }
 }
 
 
-export default ProductInfo
+export default ProductBasic
