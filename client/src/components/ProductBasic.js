@@ -1,15 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class ProductBasic extends Component {
-  render() {
-    return(
-      <div className='product-div'>
-       <img className='product-img' src='https://react.semantic-ui.com/images/wireframe/image.png' />
-       <a href='#'><h4>{this.props.name}</h4></a>
-       <strong>{this.props.price}</strong>
-      </div>
-    )
-  }
+const ProductBasic = ({ id, name, image, price }) =>
+{
+  return (
+    <a className='product-link'  href={`/products/${id}`}>
+     <div className='product-div'>
+       <img className='product-img' src={image} alt='not loading' />
+       <h4>{name}</h4>
+       <em>{price}</em>
+     </div>
+    </a>
+  )
 }
 
 

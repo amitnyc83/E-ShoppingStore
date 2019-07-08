@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.product-link {
+  color: blue;
+}
+
+.product-link:hover {
+  color: #FD7322;
+}
+
 .cart-container {
   width: 90%;
   margin-left: auto;

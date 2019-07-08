@@ -1,19 +1,19 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ProductBasic from '../components/ProductBasic'
 
-class ProductsList extends Component {
-  render() {
-    return(
-      <div>
-       {this.props.products.map(product =>
-         <ProductBasic
-           name={product.name}
-           price={product.price}
-          />
-        )}
-      </div>
-    )
-  }
+const ProductsList = ({ products }) => {
+  return(
+    <div className='page-container'>
+     {products.map(product =>
+       <ProductBasic
+         id={product.id}
+         name={product.name}
+         image={product.image}
+         price={product.price}
+        />
+      )}
+    </div>
+  )
 }
 
 
