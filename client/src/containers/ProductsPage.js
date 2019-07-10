@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Route, Switch } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import { Header, Divider } from 'semantic-ui-react'
 import ProductsList from '../components/ProductsList'
 import ProductShow from '../components/ProductShow'
@@ -12,6 +12,13 @@ const ProductsPage = ({ match, products }) =>
    <Divider hidden />
   </Header>
   <ProductsList products={products} />
+  <Route path={`${match.url}/:productId`} component={ProductShow} />
+  {match.url}
 </div>
 
-export default ProductsPage
+
+function mapStateToProps(state) {
+  return { products: state.products }
+}
+
+export default connect(mapStateToProps)(ProductsPage)

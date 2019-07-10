@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from './actions/productActions';
@@ -28,7 +28,8 @@ class App extends Component {
         <header>
         <h1 className="app-title">E-Shopping Store</h1>
         </header>
-        <Route exact path="/" render={()=><ProductsPage products={this.props.products} />} />
+        <Redirect from="/" to="/products" />
+        <Route exact path="/products" component={ProductsPage} />
         <Route exact path="/LogIn" component={LogIn} />
         <Route exact path="/SignUp" component={SignUp} />
         <Route exact path="/account" component={Account} />

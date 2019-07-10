@@ -17,7 +17,7 @@ class HomePage extends Component {
       <Sticky>
         <Menu attached='top' tabular>
           <Menu.Item
-            as={Link} to='/'
+            as={Link} to='/products'
             name='home'
             color='orange'
             active={activeItem === 'home'}
