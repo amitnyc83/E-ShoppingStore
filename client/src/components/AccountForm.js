@@ -14,13 +14,7 @@ class AccountForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log(this.firstName)
-    fetch('api/users', {
-      method: 'POST',
-      body: new FormData(document.getElementById("user-form")),
-      credentials: 'same-origin'
-    })
-    .then(resp => console.log(resp))
+    console.log(this.state)
   }
 
   handleChange = (e) => {
@@ -31,7 +25,8 @@ class AccountForm extends Component {
 
   render() {
     return(
-      <Form id="user-form" className='attached fluid segment' onSubmit={this.handleSubmit}>
+      <div>
+      <Form className='attached fluid segment' onSubmit={this.handleSubmit}>
         <Form.Group widths='equal'>
           <Form.Input
             fluid label='First Name'
@@ -72,6 +67,12 @@ class AccountForm extends Component {
           />
         <Button color='blue'>Submit</Button>
       </Form>
+      {this.state.firstName}
+      {this.state.lastName}
+      {this.state.email}
+      {this.state.password}
+      {this.state.formType}
+      </div>
     )
   }
 }

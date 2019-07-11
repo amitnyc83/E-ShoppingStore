@@ -14,7 +14,7 @@ class SignUp extends Component {
           header='Welcome to our site!'
           content='Fill out the form below to sign-up for a new account'
         />
-      <AccountForm/>
+      <AccountForm formType={'createUser'} />
         <Message attached='bottom' warning>
           Already signed up?&nbsp;<Button as={Link} to='/login' content='Login here'/>&nbsp;instead.
         </Message>

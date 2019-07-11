@@ -11,7 +11,7 @@ import AccountForm from './AccountForm'
           Update Account Details
           <Divider hidden />
         </Header>
-        <AccountForm />
+        <AccountForm formType={'updateUser'}/>
       </Container>
     )
   }
