@@ -15,9 +15,7 @@ import Cart from './containers/Cart'
 
 class App extends Component {
 
-  componentDidMount(){
-    this.props.actions.fetchProducts()
-  }
+
 
   render(){
     return (
